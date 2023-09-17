@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background: conic-gradient(
+      from 90deg at 0.7px 0.7px,
+      #011229 90deg,
+      rgb(0, 14, 44) 0
+    )
+    0 0/30px 30px;
+}
+
+.container {
+}
+
+.navbar {
+  display: flex;
+  color: white;
+  justify-content: center;
+  background-color: #011229;
+}
+.navbar h1 {
+  padding: 0 10px;
+  font-size: 36px;
+}
+
+.pages {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pages a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: rgba(1, 12, 44, 0.452);
+  padding: 40px 70px;
+  border: 1px solid rgba(14, 14, 14, 0.158);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pages a:hover {
+  background-color: rgb(2, 16, 59);
+  border: 0px solid rgba(14, 14, 14, 0.39);
+  box-shadow: 1px 0px 60px 1px rgba(1, 42, 102, 0.685);
+  transform: scale(1.1);
+}
