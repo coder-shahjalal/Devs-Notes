@@ -32,9 +32,12 @@ body {
 }
 
 .pages {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px 40px;
 }
 
 .pages a {
@@ -42,11 +45,13 @@ body {
   color: white;
   font-size: 1.5rem;
   font-weight: 600;
+  text-align: center;
   background-color: rgba(1, 12, 44, 0.452);
-  padding: 40px 70px;
+  padding: 50px 0;
   border: 1px solid rgba(14, 14, 14, 0.158);
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
+  width: 20%;
 }
 
 .pages a:hover {
