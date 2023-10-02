@@ -7,29 +7,61 @@
     <style></style>
   </head>
   <body>
-    <div class="friends">
-      <h3>Friend-1</h3>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aut.
-    </div>
-    <div class="friends">
-      <h3>Friend-2</h3>
-      Totam itaque porro adipisci optio neque eius fuga tenetur unde?
-    </div>
-    <div class="friends">
-      <h3>Friend-3</h3>
-      Quae rem voluptate dolor sed accusamus? Dignissimos incidunt suscipit
-      ipsum.
-    </div>
-    <div class="friends">
-      <h3>Friend-4</h3>
-      Fugiat similique ipsum mollitia rerum ab! Eligendi aut atque eum!
-    </div>
-    <div class="friends">
-      <h3>Friend-5</h3>
-      Animi nam, libero tempora dignissimos adipisci quaerat laudantium nisi
-      dolor.
-    </div>
+    <section>
+      <div id="friends">
+        <div class="friends">
+          <h3 class="friend-name">Friend-1</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aut.
+        </div>
+        <div class="friends">
+          <h3 class="friend-name">Friend-2</h3>
+          Totam itaque porro adipisci optio neque eius fuga tenetur unde?
+        </div>
+        <div class="friends">
+          <h3 id="center-friend" class="friend-name">Friend-3</h3>
+          Quae rem voluptate dolor sed accusamus? Dignissimos incidunt suscipit
+          ipsum.
+        </div>
+        <div class="friends">
+          <h3 class="friend-name">Friend-4</h3>
+          Fugiat similique ipsum mollitia rerum ab! Eligendi aut atque eum!
+        </div>
+        <div class="friends">
+          <h3 class="friend-name">Friend-5</h3>
+          Animi nam, libero tempora dignissimos adipisci quaerat laudantium nisi
+          dolor.
+        </div>
+      </div>
+      <div class="oparation">
+        <button id="apply-bg">Apply Button</button>
+        <button id="centerFriend-btn">center text</button>
+        <button id="add-friends">Add Friend</button>
+      </div>
+    </section>
 
-    <script></script>
+    <script>
+      document.getElementById("apply-bg").addEventListener("click", () => {
+        const friends = document.getElementsByClassName("friends");
+        for (const friend of friends) {
+          friend.style.backgroundColor = "goldenrod";
+        }
+      });
+
+      document
+        .getElementById("centerFriend-btn")
+        .addEventListener("click", () => {
+          const centerFriend = document.getElementById("center-friend");
+          centerFriend.style.textAlign = "center";
+        });
+
+      document.getElementById("add-friends").addEventListener("click", () => {
+        const friendContainer = document.getElementById("friends");
+        const friend = document.createElement("div");
+        friend.classList.add("friends");
+        friend.innerHTML = `<h3 class = 'freind-name'>New Friend </h3>
+         <p>something new added</p>`;
+        friendContainer.appendChild(friend);
+      });
+    </script>
   </body>
 </html>
