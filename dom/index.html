@@ -53,13 +53,14 @@
           const centerFriend = document.getElementById("center-friend");
           centerFriend.style.textAlign = "center";
         });
-
+      // append child as a
       document.getElementById("add-friends").addEventListener("click", () => {
         const friendContainer = document.getElementById("friends");
         const friend = document.createElement("div");
         friend.classList.add("friends");
         friend.innerHTML = `<h3 class = 'freind-name'>New Friend </h3>
          <p>something new added</p>`;
+        friendContainer.appendChild(friend);
         friendContainer.appendChild(friend);
         friendContainer.appendChild(friend);
       });
